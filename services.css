@@ -1,0 +1,25 @@
+/* services.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+/* Override specific styles for services */
+.services {
+    background-color:#0A97B7; /* Replace with your background color */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.services h2 {
+    font-size: 3em;
+    margin: 0;
+    padding-top: 20vh;
+}
+
+.services p {
+    font-size: 15px;
+    margin: 10px auto;
+    max-width: 800px;
+    text-align: center;
+    color:black;
+}

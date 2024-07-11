@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigy Infotech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="services.css">
+    <style>
+        
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .faq-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .faq-item {
+            
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+           
+            width: 48%;
+            box-sizing: border-box;
+        }
+        .faq-item.full-width {
+            width: 98%;
+        }
+        .question {
+            cursor: pointer;
+            background-color: darkorange;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .arrow {
+            font-size: 20px;
+        }
+        .answer {
+            display: none;
+            padding: 10px;
+
+           
+        }
+        .answer li {
+            color:white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .answer p{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: larger;
+        }
+        #internship {
+    background-color:darkturquoise; /* background color for the internship section */
+    padding: 20px; /* padding around the internship section */
+     /* optional margin at the bottom */
+}
+
+#internship h2 {
+    text-align: center; /* center-align the heading */
+    color: #333; /* color for the heading */
+    margin-bottom: 20px; /* optional margin below the heading */
+}
+
+#internship p {
+    text-align: center; /* center-align the paragraph */
+    color: #666; /* color for the paragraph text */
+}
+
+.internship-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.internship-item {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: darkgoldenrod; /* initial background color */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.internship-item:hover {
+    transform: translateY(-10px);
+    background-color: #FF6347; /* hover background color */
+    color: white; /* text color on hover */
+}
+.contact {
+    background-color:deepskyblue;
+    
+    text-align: center;
+}
+
+.contact h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF6347;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #f04be2;
+}
+
+    </style>
+     <script>
+         document.addEventListener("DOMContentLoaded", function() {
+             const questions = document.querySelectorAll('.question');
+             questions.forEach(question => {
+                 question.addEventListener('click', function() {
+                     const answer = this.nextElementSibling;
+                     const isVisible = answer.style.display === 'block';
+                     
+                     // Close all answers
+                     document.querySelectorAll('.answer').forEach(ans => ans.style.display = 'none');
+                     document.querySelectorAll('.arrow').forEach(arrow => arrow.textContent = '▶');
+                     
+                     // Toggle the clicked answer
+                     if (!isVisible) {
+                         answer.style.display = 'block';
+                         this.querySelector('.arrow').textContent = '▼';
+                     } else {
+                         answer.style.display = 'none';
+                         this.querySelector('.arrow').textContent = '▶';
+                     }
+                 });
+             });
+         });
+     </script>
+</head>
+<body>
+
+    <div class="navbar" id="navbar">
+        <a href="#header">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#internship">Internship</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="section header" id="header">
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="context">
+            <h1>Prodigy<img src="bulb.png" alt="Bulb" class="bulb-image"> Infotech</h1>
+            <p>Your journey to excellence begins here. Prodigy Infotech provides internships for freshers to learn new skills and excel in their careers.</p>
+        </div>
+    </div>
+
+    <div class="section about" id="about">
+        <div class="about-image">
+            <img src="aboutusimg.png" alt="Image" class="about-img">
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h2 style="font-weight:bold;">About Us</h2>
+                <p>Learn more about Prodigy Infotech and our mission.</p>
+                <p>We are dedicated to providing top-notch internships for freshers, helping them kickstart their careers with hands-on experience and expert mentorship.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section services" id="services">
+        <h2>Our Services</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="question">
+                    <span>What internships are provided?</span> <span class="arrow">▶</span>
+                </div>
+                <div class="answer">
+                    <p>We provide internships in various fields:</p>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Full Stack Web Development</li>
+                        <li>Mobile App Development</li>
+                        <li>Data Science</li>
+                        <li>Machine Learning</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">
+                    <span>How long are the internships?</span> <span class="arrow">▶</span>
+                </div>
+                <div class="answer">
+                    <p>Every internship is for only one month.</p>
+                    <ul>
+                        <li>Web Development: 1 month</li>
+                        <li>Full Stack Web Development: 1 month</li>
+                        <li>Mobile App Development: 1 month</li>
+                        <li>Data Science: 1 month</li>
+                        <li>Machine Learning: 1 month</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">
+                    <span>Is it a paid internship or unpaid internship?</span> <span class="arrow">▶</span>
+                </div>
+                <div class="answer">
+                    <p>It is an unpaid internship. It improves the skills of the fresher.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">
+                    <span>Is a certificate given after completion of the course?</span> <span class="arrow">▶</span>
+                </div>
+                <div class="answer">
+                    <p>Yes, a certificate is given after completion of the course, which can be a valuable addition to your resume and help in your future career endeavors.</p>
+                </div>
+            </div>
+
+            <div class="faq-item full-width">
+                <div class="question">
+                    <span>Can we do multiple internships at a time?</span> <span class="arrow">▶</span>
+                </div>
+                <div class="answer">
+                    <p>No, only one internship is allowed at a time. If you want to do web development, you choose web development. Multiple internships are not possible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section internship" id="internship">
+        <br><br><br><br><br><br>
+        <h2 style="font-size: 50px; color:rgb(3, 54, 68);border: beige;">Internship</h2><br>
+        <p style="font-family: 'Times New Roman', Times, serif;color:lemonchiffon;
+        font-size: larger;">Join our internship program and kickstart your career with hands-on experience and mentorship from industry experts.</p>
+       <br><p style="font-family: 'Times New Roman', Times, serif;color:lemonchiffon;
+        font-size: larger;">Apply for the internship, complete the tasks diligently, and receive a certificate with a <br><br>sense of accomplishment and joy!</p>
+       <br>
+        <div class="internship-container">
+            <div class="internship-item">Web Development</div>
+            <div class="internship-item">Full Stack Web Development</div>
+            <div class="internship-item">Mobile App Development</div>
+            <div class="internship-item">Data Science</div>
+            <div class="internship-item">Machine Learning</div>
+            
+        </div>
+        <br>
+        
+    </div>
+
+    <div class="section contact" id="contact">
+        <br><br><br><br><br><br>
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for more information.</p>
+        <form action="/submit-contact-form" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    
+
+    <script src="Services.js"></script>
+
+    <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById("navbar");
+            if (window.pageYOffset > 0) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        };
+    </script>
+</body>
+</html>
